@@ -52,6 +52,7 @@ restart_haproxy = functools.partial(marathon_app_restart, 'maayan-haproxy-certif
 
 apps = {
   # url: what to do on failure
+  'https://amp.pharm.mssm.edu/archs4/': restart_haproxy,
   'https://amp.pharm.mssm.edu/biojupies/': restart_haproxy,
   'https://amp.pharm.mssm.edu/chea3/': restart_haproxy,
   'https://amp.pharm.mssm.edu/creeds/': restart_haproxy,
@@ -61,6 +62,7 @@ apps = {
   'https://amp.pharm.mssm.edu/kea3/': restart_haproxy,
   'https://amp.pharm.mssm.edu/L1000CDS2/': restart_haproxy,
   'https://amp.pharm.mssm.edu/l1000fwd/': restart_haproxy,
+  'https://amp.pharm.mssm.edu/scavi/': restart_haproxy,
 }
 
 for url, func_on_failure in apps.items():
